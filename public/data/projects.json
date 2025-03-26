@@ -3,13 +3,41 @@
       "id": 1,
       "title": "Workout Tracker App",
       "description": "Een PWA om mijn sportschoolprogressie bij te houden.",
-      "date": "2024-12-01",
-      "url": "https://github.com/mennovlaming/workout-tracker"
+      "date": "26-03-2025",
+      "url": "coming soon"
     },
     {
       "id": 2,
-      "title": "Portfolio Website",
-      "description": "Mijn persoonlijke portfolio gebouwd met React.",
+      "title": "Kindercoach juf Monique",
+      "description": "Website voor Kindercoach juf Monique.",
+      "date": "2024-03-11",
+      "url": "https://github.com/mennovlaming/portfolio"
+    },
+    {
+      "id": 3,
+      "title": "Portfolio farmflowerscollection",
+      "description": "De autocollectie van farmflowers website.",
+      "date": "2025-03-01",
+      "url": "https://github.com/mennovlaming/portfolio"
+    },
+    {
+      "id": 4,
+      "title": "Task manager Python",
+      "description": "Python learn project",
+      "date": "2025-03-01",
+      "url": "https://github.com/mennovlaming/portfolio"
+    },
+    {
+      "id": 5,
+      "title": "Booklist HTMX",
+      "description": "HTMX try out project",
+      "date": "2025-03-01",
+      "url": "https://github.com/mennovlaming/portfolio"
+    },
+    {
+      "id": 6,
+      "title": "Foodtracker PWA",
+      "description": "PWA om voeding bij te houden",
       "date": "2025-03-01",
       "url": "https://github.com/mennovlaming/portfolio"
     }
