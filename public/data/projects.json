@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "title": "Workout Tracker App",
+      "description": "Een PWA om mijn sportschoolprogressie bij te houden.",
+      "date": "2024-12-01",
+      "url": "https://github.com/mennovlaming/workout-tracker"
+    },
+    {
+      "id": 2,
+      "title": "Portfolio Website",
+      "description": "Mijn persoonlijke portfolio gebouwd met React.",
+      "date": "2025-03-01",
+      "url": "https://github.com/mennovlaming/portfolio"
+    }
+  ]
+  

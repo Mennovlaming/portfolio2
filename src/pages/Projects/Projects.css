@@ -1,0 +1,69 @@
+.ProjectBlogToggle {
+    display: flex;
+    gap: 1em;
+    cursor: pointer;
+}
+
+.active {
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--black);
+}
+
+body.dark-mode .active {
+    border-bottom: 2px solid white;
+}
+
+body.dark-mode .project-text, body.dark-mode .blog-item {
+    background-color: var(--dark-blue);
+    color: white;
+}
+.blog, .projects {
+    margin-top: 2em;
+}
+body.dark-mode .project-item, .body.dark-mode .blog-item {
+    border: none;
+}
+.project-item, .blog-item {
+    border: 2px solid rgb(237, 237, 237);
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Correct dark mode selector for both .projects and .blog */
+body.dark-mode .project, 
+body.dark-mode .blog-item {
+    border: 2px solid black;
+}
+
+.project-text, .blog-item {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    padding: 1em;
+    background-color: var(--light-blue);
+    color: var(--black);
+}
+
+.projects img {
+    height: 10em;
+    object-fit: cover;
+}
+
+hr {
+    height: 2px; 
+    border: none; 
+    background-color: #efefef; 
+}
+
+body.dark-mode hr {
+    height: .5px;
+}
+
+@media (min-width: 920px) {
+   .projects, .blog{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+   }
+}
