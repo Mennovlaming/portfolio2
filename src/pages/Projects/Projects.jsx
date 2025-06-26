@@ -91,7 +91,7 @@ function Projects() {
 
                     {project.url && (
                       <a href={project.url} target='_blank' rel='noopener noreferrer'>
-                        View on GitHub
+                        View
                       </a>
                     )}
                   </div>
