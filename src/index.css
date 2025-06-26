@@ -3,7 +3,7 @@
   font-optical-sizing: auto;
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   --light-blue: #1EC8FF;
-  --dark-blue: #1E90FF; 
+  --dark-blue: #4834ff; 
   --black: #1E1E1E;
   --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -29,6 +29,9 @@ body, html {
 
 .content {
   flex: 1; 
+
+  display: flex;
+  justify-content: center;
 }
 
 body {
@@ -55,6 +58,7 @@ p {
 }
 
 .container {
+  width: 36em;
   margin-top: 6em;
   margin-left: 2em;
   margin-right: 2em;
@@ -64,7 +68,7 @@ p {
   margin-top: 3em;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2em;
 }
 

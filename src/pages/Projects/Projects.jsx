@@ -87,7 +87,7 @@ function Projects() {
                   <div className='project-text'>
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
-                    <p>{new Date(project.date).toLocaleDateString()}</p>
+                    {/* <p>{new Date(project.date).toLocaleDateString()}</p> */}
 
                     {project.url && (
                       <a href={project.url} target='_blank' rel='noopener noreferrer'>

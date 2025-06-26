@@ -11,7 +11,7 @@ function Home() {
             <p>
             <strong>Hi there, welcome to my website!</strong>
                 <br /><br />
-                I'm Menno, a 26-year-old developer and UX designer with a love for creativity and innovation. I'm always exploring new ideas, learning new things, and pushing myself to build awesome digital experiences. Whether it's coding, designing, or combining the two! 
+                I'm Menno, a 27-year-old developer and UX designer with a love for creativity and innovation. I'm always exploring new ideas, learning new things, and pushing myself to build awesome digital experiences. Whether it's coding, designing, or combining the two! 
                 <br /><br />
                 Feel free to check out some of the projects I've been working on, browse through my random sketches, or dive into articles and thoughts I’ve shared. Enjoy!
             </p>

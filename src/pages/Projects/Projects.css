@@ -2,68 +2,131 @@
     display: flex;
     gap: 1em;
     cursor: pointer;
-}
-
-.active {
+  }
+  
+  .active {
     padding-bottom: 10px;
     border-bottom: 2px solid var(--black);
-}
-
-body.dark-mode .active {
+  }
+  
+  body.dark-mode .active {
     border-bottom: 2px solid white;
-}
-
-body.dark-mode .project-text, body.dark-mode .blog-item {
-    background-color: var(--dark-blue);
-    color: white;
-}
-.blog, .projects {
+  }
+  
+  .blog, .projects {
     margin-top: 2em;
-}
-body.dark-mode .project-item, .body.dark-mode .blog-item {
+  }
+  
+  /* Kaarten (project/blog item) */
+  .project-item, .blog-item {
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
     border: none;
-}
-.project-item, .blog-item {
-    border: 2px solid rgb(237, 237, 237);
-    margin-bottom: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  
+  
+  .project-item:hover {
+    transform: translateY(-2px);
+    transition: 0.2s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  
+  /* Inhoud van de kaart */
+  .project-text, .blog-item {
     display: flex;
     flex-direction: column;
-}
-
-/* Correct dark mode selector for both .projects and .blog */
-body.dark-mode .project, 
-body.dark-mode .blog-item {
-    border: 2px solid black;
-}
-
-.project-text, .blog-item {
-    display: flex;
-    flex-direction: column;
-    gap: .5em;
-    padding: 1em;
-    background-color: var(--light-blue);
+    gap: 0.5em;
+    
     color: var(--black);
-}
+    padding: 1em;
+   
+  }
+  
+  .project-item, .blog-item {
+    border: 1px solid #4ea1ff;
+    /* border-left: 3px solid #4ea1ff; */
+  }
+  
+  .project-text h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .project-text p {
+    font-size: .9rem;
+    color: #444;
+    margin: 0;
+  }
+  
+  /* Donkere modus */
+  body.dark-mode .project-item, 
+  body.dark-mode .blog-item {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    box-shadow: none;
+  }
+  
+  body.dark-mode .project-text h3,
+  body.dark-mode .project-text p {
+    color: #ddd;
+  }
 
-.projects img {
+  /* Afbeeldingen */
+  .projects img {
     height: 10em;
     object-fit: cover;
-}
-
-hr {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  /* HR lijn */
+  hr {
     height: 2px; 
     border: none; 
     background-color: #efefef; 
-}
+  }
+  
+  body.dark-mode hr {
+    height: 0.5px;
+    background-color: #444;
+  }
+  
+  /* Responsive grid */
+  @media (min-width: 920px) {
+    .projects, .blog {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+  
+    .project-item, .blog-item {
+      flex: 1 1 calc(50% - 1em);
+    }
+  }
+  
 
-body.dark-mode hr {
-    height: .5px;
-}
+  .project-text a {
+    color: #4ea1ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: .8em;
+  }
+  
+  .project-text a:hover {
+    text-decoration: underline;
+  }
+  
+  .project-text a:visited {
+    color: #4ea1ff; /* voorkomt paars */
+  }
 
-@media (min-width: 920px) {
-   .projects, .blog{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-   }
-}
+ 
+  
