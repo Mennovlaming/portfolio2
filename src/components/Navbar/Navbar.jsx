@@ -1,57 +1,58 @@
-import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React, { useState, useRef } from "react";
+import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false); // Staat van dark mode
-    const imgRef = useRef(null); // Ref voor de afbeelding
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const imgRef = useRef(null);
 
-    const handleLinkClick = () => {
-        const checkbox = document.querySelector('.hamburger-menu input[type="checkbox"]');
-        if (checkbox) {
-            checkbox.checked = false;
-        }
-    };
+  const handleLinkClick = () => {
+    const checkbox = document.getElementById("hamburger-checkbox");
+    if (checkbox) checkbox.checked = false;
+  };
 
-    const toggleDarkMode = (e) => {
-        e.preventDefault(); // Voorkom standaard navigatiegedrag
-        setIsDarkMode(!isDarkMode); // Wissel de dark mode status om
-        if (!isDarkMode) {
-            document.body.classList.add('dark-mode'); // Voeg dark-mode klasse toe
-            if (imgRef.current) {
-                imgRef.current.src = "/icons/Vector-dark.svg"; // Verander naar dark mode afbeelding
-            }
-        } else {
-            document.body.classList.remove('dark-mode'); // Verwijder dark-mode klasse
-            if (imgRef.current) {
-                imgRef.current.src = "/icons/Vector.svg"; // Verander naar light mode afbeelding
-            }
-        }
-    };
+  const toggleDarkMode = (e) => {
+    e.preventDefault();
+    setIsDarkMode(!isDarkMode);
+    if (!isDarkMode) {
+      document.body.classList.add("dark-mode");
+      if (imgRef.current) imgRef.current.src = "/icons/Vector-dark.svg";
+    } else {
+      document.body.classList.remove("dark-mode");
+      if (imgRef.current) imgRef.current.src = "/icons/Vector.svg";
+    }
+  };
 
-    return (
-        <>
-            {/* Dark mode toggle knop */}
-            <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-                <img ref={imgRef} src="/icons/Vector.svg" alt="Dark Mode Toggle" />
-            </button>
-            <label className="hamburger-menu">
-                <input type="checkbox" />
-            </label>
-            
-            <aside className="sidebar">
-                <nav>  
-                    <ul>
-                        <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
-                        <li><Link to="/About" onClick={handleLinkClick}>About me</Link></li>
-                        <li><Link to="/Projects" onClick={handleLinkClick}>Projects / Blog</Link></li>
-                        {/* <li><Link to="/Blog" onClick={handleLinkClick}>Blog</Link></li> */}
-                        <li><Link to="/Contact" onClick={handleLinkClick}>Contact</Link></li>
-                    </ul>
-                </nav>
-            </aside>
-        </>
-    );
+  return (
+    <nav>
+      <input type="checkbox" id="hamburger-checkbox" className="hamburger-checkbox" />
+      <label htmlFor="hamburger-checkbox" className="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <aside className="sidebar">
+        <ul>
+          <li>
+            <HashLink smooth to="/#home" onClick={handleLinkClick}>Home</HashLink>
+          </li>
+          <li>
+            <HashLink smooth to="/#about" onClick={handleLinkClick}>About me</HashLink>
+          </li>
+          <li>
+            <HashLink smooth to="/#projects" onClick={handleLinkClick}>Projects / Blog</HashLink>
+          </li>
+          <li>
+            <HashLink smooth to="/#contact" onClick={handleLinkClick}>Contact</HashLink>
+          </li>
+        </ul>
+      </aside>
+
+      <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+        <img ref={imgRef} src="/icons/Vector.svg" alt="Dark Mode Toggle" />
+      </button>
+    </nav>
+  );
 };
 
 export default NavBar;

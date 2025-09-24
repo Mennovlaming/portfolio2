@@ -1,7 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Home.css';
 
 function Home() {
     return (
@@ -17,14 +15,24 @@ function Home() {
             </p>
             
             {/* Button section */}
-            <div className='button-group'>
+            {/* <div className='button-group'>
                 <Link to="/Projects/projects">
                     <button className='button-fill'>Projects</button> 
                 </Link>
                 <Link to="/Projects/blog">
                     <button className='button-outline'> Blog</button> 
                 </Link>
-            </div>
+            </div> */}
+
+<div className='button-group'>
+    <a href="#projects">
+        <button className='button-fill'>Projects</button> 
+    </a>
+    <a href="#projects">
+        <button className='button-outline'> Blog</button> 
+    </a>
+</div>
+
         </div>
     );
 }

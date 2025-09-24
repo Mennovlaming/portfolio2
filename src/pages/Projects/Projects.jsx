@@ -1,13 +1,11 @@
+// Projects.jsx
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; 
-import './Projects.css';
+import { Link } from "react-router-dom";
 
 function Projects() {
-  const { tab } = useParams(); 
-  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('projects'); 
   const [blogs, setBlogs] = useState([]);
-  const [projects, setProjects] = useState([]); // Add state for projects
+  const [projects, setProjects] = useState([]); 
 
   // Fetch blogs
   useEffect(() => {
@@ -36,41 +34,22 @@ function Projects() {
     };
     fetchProjects();
   }, []);
-  
-
-  // Set the active tab based on the URL parameter when the component mounts
-  useEffect(() => {
-    if (tab === 'blog') {
-      setActiveTab('blog');
-    } else {
-      setActiveTab('projects');
-    }
-  }, [tab]); 
-
-  const showProjects = () => {
-    setActiveTab('projects');
-    navigate('/Projects/projects');
-  };
-
-  const showBlog = () => {
-    setActiveTab('blog');
-    navigate('/Projects/blog');
-  };
 
   return (
     <div className='container'>
-      <h1>{activeTab === 'projects' ? 'Projects' : 'Blogs'}</h1>
+      <h1>{activeTab === 'projects' ? 'Projects' : 'Blog'}</h1>
 
+      {/* Tab switcher */}
       <ul className='ProjectBlogToggle'>
         <li 
           className={activeTab === 'projects' ? 'active' : ''} 
-          onClick={showProjects}
+          onClick={() => setActiveTab('projects')}
         >
           Projects
         </li>
         <li 
           className={activeTab === 'blog' ? 'active' : ''} 
-          onClick={showBlog}
+          onClick={() => setActiveTab('blog')}
         >
           Blog
         </li>
@@ -87,32 +66,32 @@ function Projects() {
                   <div className='project-text'>
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
-                    {/* <p>{new Date(project.date).toLocaleDateString()}</p> */}
 
-                    {project.url && (
+                    {/* {project.url && (
                       <a href={project.url} target='_blank' rel='noopener noreferrer'>
                         View
                       </a>
-                    )}
+                      
+                    )} */}
+                    <Link to={`/projects/${project.id}`}>View details</Link>
                   </div>
                 </div>
               ))}
-              
             </>
           ) : (
             <p>No projects available</p>
           )}
 
           <div className='view-all'>
-                  <a 
-                    href='https://github.com/mennovlaming' 
-                    target='_blank' 
-                    rel='noopener noreferrer'
-                  >
-                    View all projects on GitHub
-                  </a>
-                </div>
-          </div>   
+            <a 
+              href='https://github.com/mennovlaming' 
+              target='_blank' 
+              rel='noopener noreferrer'
+            >
+              View all projects on GitHub
+            </a>
+          </div>
+        </div>   
       )}
 
       {/* Blog Tab */}

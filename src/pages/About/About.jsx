@@ -1,5 +1,4 @@
 import React from 'react';
-import './About.css';
 
 function About() {
     return (
@@ -16,10 +15,11 @@ I’m always looking for ways to combine my strengths in design, development, an
 Thanks for stopping by! Feel free to reach out if you’d like to connect or collaborate.
             </p>
             <div className='button-group'>
-            <button className='button-fill'>
-                Projects
-            </button>
-            </div>
+    <a href="#projects">
+        <button className='button-fill'>Projects</button>
+    </a>
+</div>
+
         </div>
         
     )

@@ -1,46 +1,112 @@
 [
-    {
-      "id": 0,
-      "title": "Workout Tracker App",
-      "description": "Een PWA om progressie in de sportschool bij te houden.",
-      "url": "coming soon"
-    },
+    
     {
       "id": 1,
       "title": "Kustlijn Events",
-      "description": "Een website voor mijn vrienden van Kustlijn Events",
-      "url": "https://www.kustlijnevents.nl/"
+      "description": "Een Frontend voor mijn vrienden van Kustlijn Events gemaakt in React.",
+      "url": "https://www.kustlijnevents.nl/",
+      "techStack": ["React"],
+      "screenshots": [
+        "/project_pictures/kustlijn1.png", "/project_pictures/kustlijn2.png", "/project_pictures/kustlijn3.png"
+      ],
+    
+    "role": "Frontend + Backend",
+    "longDescription": ""
     },
     {
       "id": 2,
       "title": "Kindercoach juf Monique",
-      "description": "Website voor Kindercoach juf Monique.",
-      "url": "https://www.kindercoachjufmonique.nl/"
+      "description": "Frontend only voor Kindercoach juf Monique.",
+      "url": "https://www.kindercoachjufmonique.nl/",
+      "techStack": ["React", "Python", "PWA"],
+      "screenshots": ["/project_pictures/jufmonique.png"
+       
+      ],
+    
+    "role": "Frontend + Backend",
+    "longDescription": ""
     },
     {
       "id": 3,
       "title": "Portfolio farmflowerscollection",
       "description": "De autocollectie van farmflowers website.",
-      "url": "https://farmflowerscollection.nl"
+      "url": "https://farmflowerscollection.nl",
+      "techStack": ["React", "Python", "PWA"],
+      "screenshots": ["/project_pictures/farmflowers1.png", "/project_pictures/farmflowers2.png"
+
+      ],
+    
+    "role": "Frontend + Backend",
+    "longDescription": ""
     },
     {
       "id": 4,
       "title": "Task manager Python",
-      "description": "Python learn project",
-      "url": "https://github.com/mennovlaming/portfolio"
+      "description": "Kleine python cursus gevolgd.",
+      "url": "https://github.com/mennovlaming/portfolio",
+      "techStack": ["React", "Python", "PWA"],
+      "screenshots": ["/project_pictures/taskmanager.png"
+
+      ],
+    
+    "role": "Frontend + Backend",
+    "longDescription": ""
     },
     {
       "id": 5,
-      "title": "Booklist HTMX",
-      "description": "HTMX try out project",
-      "url": "https://github.com/Mennovlaming/booklist"
+      "title": "Slimme thermostaat UI",
+      "description": "UX/UI project voor een dashboard.",
+      "date": "2025-03-01",
+      "url": "https://github.com/Mennovlaming/Foodtracker",
+      "techStack": ["React", "Python", "PWA"],
+      "screenshots": [
+        "/project_pictures/thermo1.png",
+        "/project_pictures/thermo2.png",
+        "/project_pictures/thermo3.png"
+      ],
+    
+    "role": "Frontend + Backend",
+    "longDescription": ""
     },
     {
       "id": 6,
-      "title": "Foodtracker PWA",
-      "description": "PWA om voeding bij te houden",
-      "date": "2025-03-01",
-      "url": "https://github.com/Mennovlaming/Foodtracker"
+      "title": "Booklist HTMX",
+      "description": "HTMX cursus gevolgd, super interessant",
+      "url": "https://github.com/Mennovlaming/booklist",
+      "techStack": ["React", "Python", "PWA"],
+      "screenshots": [
+
+      ],
+    
+    "role": "Frontend + Backend",
+    "longDescription": ""
+    },
+
+    {
+      "id": 7,
+      "title": "Workout Tracker App",
+      "description": "Een PWA om progressie in de sportschool bij te houden. Momenteel bezig met de ontwikkeling.",
+      "url": "coming soon",
+      "techStack": ["React", "Python", "PWA"],
+      "screenshots": ["/project_pictures/workout1.png", "/project_pictures/workout2.png", "/project_pictures/workout3.png", "/project_pictures/workout4.png", "/project_pictures/workout5.png"
+
+      ],
+    
+    "role": "Frontend + Backend",
+    "longDescription": ""
+    },
+    {
+      "id": 8,
+      "title": "Real time chat app",
+      "description": "Simpele chatroom, geexpirimenteerd met socket.io .",
+      "url": "coming soon",
+      "techStack": ["React", "Python", "PWA"],
+      "screenshots": ["/project_pictures/workout1.png", "/project_pictures/workout2.png", "/project_pictures/workout3.png", "/project_pictures/workout4.png", "/project_pictures/workout5.png"
+
+      ],
+    
+    "role": "Frontend + Backend",
+    "longDescription": ""
     }
   ]
   
