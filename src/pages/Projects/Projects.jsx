@@ -54,7 +54,7 @@ function Projects() {
           Blog
         </li>
       </ul>
-      <hr />
+      
 
       {/* Projects Tab */}
       {activeTab === 'projects' && (

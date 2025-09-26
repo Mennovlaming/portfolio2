@@ -8,8 +8,10 @@
   --dark-bg: #1c1c1c;
   --light-text: #1a1a1a;
   --dark-text: #f2f2f2;
-  --primary-blue: #1EC8FF;
-  --secondary-blue: #4834ff;
+  --primary-blue: #1e5162;
+  --primary-blue-hover: #1c414c;
+  --dark-mode-blue: #4a97ae;
+  --dark-mode-blue-hover: #5bb0c9;
   --shadow-light: rgba(0,0,0,0.08) 0px 4px 12px;
   --shadow-dark: rgba(0,0,0,0.3) 0px 10px 20px;
 
@@ -35,7 +37,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 400; color: inherit; }
 .button-group { display: flex; flex-wrap: wrap; gap: 1.5em; margin-top: 2em; }
 button:not(.dark-mode-toggle) { cursor: pointer; font-weight: 700; font-size: 1rem; border-radius: 8px; padding: 0.75em 1.25em; transition: all 0.3s ease; box-shadow: var(--shadow-light); }
 .button-fill { background-color: var(--primary-blue); color: #fff; border: none; }
-.button-outline { background-color: transparent; color: var(--light-text); border: 2px solid var(--primary-blue); }
+.button-outline { background-color: transparent; color: var(--light-text); border: 2px solid var(--primary-blue-hover); }
 
 /* =================== Navbar =================== */
 nav {
@@ -83,7 +85,7 @@ nav li a { text-decoration: none; font-weight: 600; font-size: 1rem; color: var(
 .project-text a { display: inline-block; margin-top: 0.5em; padding: 0.5em 1em; border-radius: 6px; background-color: var(--primary-blue); color: #fff; text-decoration: none; font-weight: 600; transition: background 0.3s ease; }
 
 /* View all link */
-.view-all { margin-top: 1.5em; text-align: right; }
+.view-all { margin-top: 1.5em;  }
 .view-all a { color: var(--primary-blue); font-weight: 600; text-decoration: none; transition: color 0.3s ease; }
 
 /* =================== Footer =================== */
@@ -98,13 +100,13 @@ footer { text-align: center; padding: 2em 0; background-color: var(--light-bg); 
 }
 
 /* =================== Light Mode Styles =================== */
-button.button-fill:hover { background-color: #1aa3ff; }
-button.button-outline:hover { color: #007acc; border-color: #007acc; }
-nav li a:hover { color: #007acc; }
+button.button-fill:hover { background-color: var(--primary-blue-hover); }
+button.button-outline:hover { color: black; border-color: var(--primary-blue-hover); }
+nav li a:hover { color: var(--primary-blue-hover); }
 .ProjectBlogToggle li.active { background-color: var(--primary-blue); color: #fff; }
-.ProjectBlogToggle li:not(.active):hover { background-color: #5a5aff; color: #fff; }
-.project-text a:hover { background-color: #1aa3ff; }
-.view-all a:hover { color: #007acc; }
+.ProjectBlogToggle li:not(.active):hover { background-color: var(--primary-blue-hover); color: #fff; }
+.project-text a:hover { background-color: var(--primary-blue-hover); }
+.view-all a:hover { color: var(--primary-blue-hover) }
 
 /* =================== Dark Mode Styles =================== */
 body.dark-mode {
@@ -115,23 +117,23 @@ body.dark-mode {
 /* Navbar */
 body.dark-mode nav { background-color: var(--dark-bg); }
 body.dark-mode nav li a { color: var(--dark-text); }
-body.dark-mode nav li a:hover { color: #80d4ff; }
+body.dark-mode nav li a:hover { color: var(--dark-mode-blue-hover); }
 
 /* Sidebar */
 body.dark-mode .sidebar { background-color: var(--dark-bg); color: var(--dark-text); }
 
 /* Buttons */
-body.dark-mode .button-fill { background-color: var(--secondary-blue); color: #fff; }
-body.dark-mode .button-fill:hover { background-color: #2b2bff; }
-body.dark-mode .button-outline { border-color: var(--secondary-blue); color: var(--dark-text); }
-body.dark-mode .button-outline:hover { color: #80d4ff; border-color: #80d4ff; }
+body.dark-mode .button-fill { background-color: var(--dark-mode-blue); color: #fff; }
+body.dark-mode .button-fill:hover { background-color: var(--dark-mode-blue-hover); }
+body.dark-mode .button-outline { border-color: var(--dark-mode-blue); color: var(--dark-text); }
+body.dark-mode .button-outline:hover { color: white; border-color: var(--dark-mode-blue-hover); }
 
 /* Dark mode toggle button */
 
 
 /* Project / Blog toggle */
-body.dark-mode .ProjectBlogToggle li.active { background-color: #4834ff; color: #fff; }
-body.dark-mode .ProjectBlogToggle li:not(.active):hover { background-color: #4545ff; color: #fff; }
+body.dark-mode .ProjectBlogToggle li.active { background-color: var(--dark-mode-blue); color: #fff; }
+body.dark-mode .ProjectBlogToggle li:not(.active):hover { background-color: var(--dark-mode-blue-hover); color: #fff; }
 
 /* Project / Blog cards */
 body.dark-mode .project-item, body.dark-mode .blog-item {
@@ -143,8 +145,8 @@ body.dark-mode .project-item:hover, body.dark-mode .blog-item:hover {
   transform: translateY(-4px);
   box-shadow: rgba(255,255,255,0.18) 0 8px 16px;
 }
-body.dark-mode .project-text a { background-color: var(--secondary-blue); color: #fff; }
-body.dark-mode .project-text a:hover { background-color: #2b2bff; }
+body.dark-mode .project-text a { background-color: var(--dark-mode-blue); color: #fff; }
+body.dark-mode .project-text a:hover { background-color: var(--dark-mode-blue-hover); }
 
 /* Hamburger */
 body.dark-mode .hamburger-menu span { background-color: var(--dark-text); }
@@ -156,12 +158,9 @@ body.dark-mode footer { background-color: var(--dark-bg); color: var(--dark-text
 body.dark-mode .content { background-color: var(--dark-bg); }
 
 /* View all links */
-body.dark-mode .view-all a:hover { color: #80d4ff; }
+body.dark-mode .view-all a:hover { color: var(--dark-mode-blue-hover); }
 
-body.dark-mode .button-outline:hover {
-  color: #2b2bff;
-  border-color: #2b2bff;
-}
+
 
 /* =================== Project Detail =================== */
 .project-detail {
@@ -262,12 +261,13 @@ body.dark-mode .button-outline:hover {
 
 body.dark-mode .visit-link,
 body.dark-mode .back-link {
-  border: 2px solid var(--secondary-blue);
+  border: 2px solid var(--dark-mode-blue);
   color: white;
 }
 
 body.dark-mode .visit-link:hover,
 body.dark-mode .back-link:hover {
-  background: var(--secondary-blue);
+  background: var(--dark-mode-blue-hover);
   color: white;
 }
+
