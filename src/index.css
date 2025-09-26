@@ -56,11 +56,11 @@ nav ul { display: flex; flex-direction: column; gap: 2em; }
 nav li a { text-decoration: none; font-weight: 600; font-size: 1rem; color: var(--light-text); transition: color 0.2s ease; }
 
 /* Dark mode toggle */
-.dark-mode-toggle { margin-left: 1em; border: none; background: transparent; color: #fff; padding: 0.5em 1em; border-radius: 6px; font-weight: 600; cursor: pointer; transition: background 0.3s ease; }
+.dark-mode-toggle { margin-left: 1em; border: none; background: transparent; color: #fff; padding: 0.5em 1em; border-radius: 6px; font-weight: 600; cursor: pointer; transition: background 0.3s ease; margin-right: 1.5em;}
 
 /* =================== Hamburger =================== */
 .hamburger-checkbox { display: none; }
-.hamburger-menu { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 201; }
+.hamburger-menu { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 201; margin-left: 1.5em; }
 .hamburger-menu span { display: block; width: 28px; height: 3px; background-color: var(--light-text); border-radius: 2px; transition: all 0.3s ease; }
 .hamburger-checkbox:checked + .hamburger-menu span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger-checkbox:checked + .hamburger-menu span:nth-child(2) { opacity: 0; }
@@ -94,7 +94,7 @@ footer { text-align: center; padding: 2em 0; background-color: var(--light-bg); 
 /* =================== Media Queries =================== */
 @media (min-width: 768px) {
   .projects, .blog { grid-template-columns: repeat(2, 1fr); }
-  nav ul { flex-direction: row; justify-content: flex-end; gap: 2em; }
+  nav ul { flex-direction: row; margin-left:1.5em; justify-content:flex-start; gap: 2em; min-width: 500px;}
   .hamburger-menu, .hamburger-checkbox { display: none; }
   .sidebar { transform: none; position: static; width: auto; height: auto; padding: 0; flex-direction: row; gap: 2em; background: transparent; box-shadow: none; }
 }
